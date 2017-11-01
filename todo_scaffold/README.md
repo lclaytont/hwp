@@ -15,7 +15,7 @@ After successful completion of this project, you will be able to:
 # Problem Statement
 Assume that you work for a company that paid to send you to I/O Avenue. You just received an urgent email from your project manager:
 
-_Junior Dev,
+Junior Dev,
 
 We’re all excited about the progress you’ve made so far. Things are going very well.
 
@@ -28,7 +28,7 @@ I know you haven't really started learning how to build a site with Rails, but w
 Create a simple ToDo List webapp. It doesn’t have to look pretty, but it should work.
 
 Thanks for all your hard work,
-PM_
+PM
 
 ---
 
@@ -38,7 +38,7 @@ So… how hard can it be to create a website in Rails? If someone asked you to c
 
 A week?  Two weeks?
 
-We’ve got *one weekend*.
+We’ve got **one weekend**.
 
 Fortunately, the instructors at I/O Avenue aren't heartless. They've written up this awesome guide to help you get through the project. Let's get to work!
 
