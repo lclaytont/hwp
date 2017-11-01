@@ -15,9 +15,9 @@ After successful completion of this project, you will be able to:
 # Problem Statement
 Assume that you work for a company that paid to send you to I/O Avenue. You just received an urgent email from your project manager.
 
-_*From:*    Project Manager <pm@ioavenue.com>
-*To:*	 	   Junior Dev <jrdev@goodluck.co>
-*Subject:* Rails Project
+_**From:**    Project Manager <pm@ioavenue.com>
+**To:**	 	   Junior Dev <jrdev@goodluck.co>
+**Subject:** Rails Project
 
 Junior Dev,
 
