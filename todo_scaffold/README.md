@@ -236,3 +236,36 @@ Navigate to `http://<box-name>.codio.io:3000/todo_items.json`
 By adding “.json” to the end of the URL, we can get a JSON version of our ToDo list.
 
 ---
+
+Where are all these views defined? In the views folder of course. `$  ls app/views/todo_items/`
+
+```
+edit.html.erb   index.json.jbuilder  show.json.jbuilder
+_form.html.erb  new.html.erb         _todo_item.json.jbuilder
+index.html.erb  show.html.erb
+```
+
+There is a view for each controller action that needs it: `index`, `new`, `show`, and `edit`. Some actions (`index` and `show`) have two views, one for HTML and another for JSON. That means I can get JSON for all my todos (`index`) or a single todo (`show`).
+
+Let’s take a look at `app/views/todo_items/show.html.erb`:
+
+```
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @todo_item.description %>
+</p>
+
+<%= link_to 'Edit', edit_todo_item_path(@todo_item) %> |
+<%= link_to 'Back', todo_items_path %>
+```
+
+All the code needed to show a single `todo_item` is in the `show` view. It’s written in HTML, but some of the tags look weird. That’s because this file is in ERB format. All the tags that start with `<%=` and end with `%>` contain Ruby code. This Ruby code uses the variables we set in our controller actions.
+
+The `show` controller only does this:
+``@todo_item = TodoItem.find(params[:id])``
+
+That same instance variable (`@todo_item`) appears in the corresponding view. The interaction between the controller and the view is as simple as that. The controller sets some instance variables (variables that begin with @), and the view uses them.
+
+---
