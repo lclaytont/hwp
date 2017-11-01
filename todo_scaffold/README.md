@@ -210,3 +210,29 @@ Enter a description and click the `Create Todo item` button:
 We can go back to our `/todo_items` URL and we should now see:
 
 ![todo_list](./images/todo_items.png)
+
+And we can now view (aka show), edit, and destroy (aka delete) my todos.
+
+---
+
+The controller that Rails generated for us is pretty impressive. Check it out for yourself. There are `index`, `show`, `new`, `edit`, `create`, `update`, and `destroy` methods (called “actions”). There are private methods (at the bottom). There’s even a `before_action` at the top:
+
+```
+before_action :set_todo_item, only: [:show, :edit, :update, :destroy]
+```
+
+`before_action` tells Rails to run the private `set_todolist` method before running any of the actions listed. And all that method does is set an instance variable, in this case `@todo_item`.
+
+In fact, most of these methods just set instance variables: index, show, new, edit
+
+The bigger methods (create, update, destroy) all do one thing, then use a big respond_to to render HTML or JSON.
+
+Navigate to `http://<box-name>.codio.io:3000/todo_items.json`
+
+```
+[{"id":1,"description":"Buy Milk","created_at":"2017-11-01T22:19:58.478Z","updated_at":"2017-11-01T22:19:58.478Z","url":"http://compact-lima.codio.io:3000/todo_items/1.json"}]
+```
+
+By adding “.json” to the end of the URL, we can get a JSON version of our ToDo list.
+
+---
