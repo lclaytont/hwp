@@ -269,3 +269,16 @@ The `show` controller only does this:
 That same instance variable (`@todo_item`) appears in the corresponding view. The interaction between the controller and the view is as simple as that. The controller sets some instance variables (variables that begin with @), and the view uses them.
 
 ---
+
+We now have to ask ourselves: Where do we set our CSS?
+
+In the `app/assets` folder.
+
+```
+$ ls app/assets/stylesheets/
+application.css	scaffold.css	todo_items.css
+```
+
+You are now ready to experiment with CSS to make your ToDo list look better. Have fun :)
+
+**Important**: Push your ToDo app to GitHub. It will be graded.
