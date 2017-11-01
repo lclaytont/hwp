@@ -28,6 +28,7 @@ I know you haven't really started learning how to build a site with Rails, but w
 Create a simple ToDo List webapp. It doesn’t have to look pretty, but it should work.
 
 Thanks for all your hard work,
+
 PM
 
 ---
