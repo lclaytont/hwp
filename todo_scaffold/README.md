@@ -140,3 +140,14 @@ class CreateTodoItems < ActiveRecord::Migration[5.1]
   end
 end
 ```
+
+Seems to make sense. Let's run the migration (i.e. update the database) `$ rake db:migrate`.
+
+```
+== 20171101211821 CreateTodoItems: migrating ===========================
+=======
+-- create_table(:todo_items)
+   -> 0.0011s
+== 20171101211821 CreateTodoItems: migrated (0.0012s) ==================
+=======
+```
