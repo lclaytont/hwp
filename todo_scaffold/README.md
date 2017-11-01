@@ -60,11 +60,9 @@ Note: Rails automatically initializes git when creating a new project. Thus, you
 
 ---
 
-What we need to create is called a scaffold. What’s that?
+What we need to create is called a scaffold. What’s that? Execute `$ rails g scaffold`:
 
 ```
-$ rails g scaffold
-
 Usage:
   rails generate scaffold NAME [field[:type][:index] field[:type][:index]] [options]
 ...
@@ -79,11 +77,9 @@ This sounds like exactly what we need. A whole webapp, model, migration, control
 
 Take a few moments to think about what a ToDo list item should have or look like. At a minimum, it should have description.
 
-Let's create a ToDo list item with a description.
+Let's create a ToDo list item with a description: `$ rails g scaffold todo_item description:string --javascript-engine=js--stylesheet-engine=css`
 
 ```
-$ rails g scaffold todo_item description:string --javascript-engine=js--stylesheet-engine=css
-
 Running via Spring preloader in process 3782
       invoke  active_record
       create    db/migrate/20171101211821_create_todo_items.rb
@@ -125,11 +121,9 @@ By default, Rails prefers that I use CoffeeScript and SCSS, but we haven’t lea
 
 ---
 
-This generator creates a whole bunch of stuff. Let’s check the migration.
+This generator creates a whole bunch of stuff. Let’s check the migration. In `db/migrate/20171101211821_create_todo_items.rb` you should see:
 
 ```
-db/migrate/20171101211821_create_todo_items.rb
-
 class CreateTodoItems < ActiveRecord::Migration[5.1]
   def change
     create_table :todo_items do |t|
@@ -150,4 +144,30 @@ Seems to make sense. Let's run the migration (i.e. update the database) `$ rake 
    -> 0.0011s
 == 20171101211821 CreateTodoItems: migrated (0.0012s) ==================
 =======
+```
+
+---
+
+When we load up the server (with `$ rails s`), we should now see the default homepage.
+
+Where’s our scaffold located? Let’s check the routes. In `config/routes.rb`:
+
+```
+Rails.application.routes.draw do
+  resources :todo_items
+end
+```
+
+The scaffold generator added a route for us. But it’s a weird one. It just says “resources”. Let's find out what this means: `$ rake routes`
+
+```
+Prefix Verb   URI Pattern                    Controller#Action
+todo_items GET    /todo_items(.:format)          todo_items#index
+       POST   /todo_items(.:format)          todo_items#create
+new_todo_item GET    /todo_items/new(.:format)      todo_items#new
+edit_todo_item GET    /todo_items/:id/edit(.:format) todo_items#edit
+todo_item GET    /todo_items/:id(.:format)      todo_items#show
+       PATCH  /todo_items/:id(.:format)      todo_items#update
+       PUT    /todo_items/:id(.:format)      todo_items#update
+       DELETE /todo_items/:id(.:format)      todo_items#destroy
 ```
