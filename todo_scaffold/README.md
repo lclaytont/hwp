@@ -51,6 +51,7 @@ Create a `project_5` folder in your `projects` folder. Then, start a new Rails a
 
 ```
 $ mkdir projects/project_5
+$ cd projects/project_5
 $ rails new todo
 $ cd todo
 ```
