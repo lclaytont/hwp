@@ -15,9 +15,9 @@ After successful completion of this project, you will be able to:
 # Problem Statement
 Assume that you work for a company that paid to send you to I/O Avenue. You just received an urgent email from your project manager.
 
-_**From:**    Project Manager <pm@ioavenue.com>
-**To:**	 	   Junior Dev <jrdev@goodluck.co>
-**Subject:** Rails Project
+**From:**    Project Manager <pm@ioavenue.com>\n
+**To:**	 	   Junior Dev <jrdev@goodluck.co>\n
+**Subject:** Rails Project\n
 
 Junior Dev,
 
@@ -32,9 +32,9 @@ I know you haven't really started learning how to build a site with Rails, but w
 Create a simple ToDo List webapp. It doesn’t have to look pretty, but it should work.
 
 Thanks for all your hard work,
-PM_
+PM
 
-...
+---
 
 Well that sucks.
 
