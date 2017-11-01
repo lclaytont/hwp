@@ -15,6 +15,8 @@ After successful completion of this project, you will be able to:
 # Problem Statement
 Assume that you work for a company that paid to send you to I/O Avenue. You just received an urgent email from your project manager:
 
+---
+
 Junior Dev,
 
 We’re all excited about the progress you’ve made so far. Things are going very well.
