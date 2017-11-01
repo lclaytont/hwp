@@ -194,3 +194,7 @@ Deletes a single todo.
 The above was generated automatically by declaring that a TodoItem is a “resource”.
 
 ---
+
+Let’s start up the server and navigate to `http://<box-name>.codio.io:3000/todo_items`.
+
+![todo_list empty](./images/todo_list_empty.png)
