@@ -161,13 +161,34 @@ end
 The scaffold generator added a route for us. But it’s a weird one. It just says “resources”. Let's find out what this means: `$ rake routes`
 
 ```
-Prefix Verb   URI Pattern                    Controller#Action
-todo_items GET    /todo_items(.:format)          todo_items#index
-       POST   /todo_items(.:format)          todo_items#create
-new_todo_item GET    /todo_items/new(.:format)      todo_items#new
+Prefix Verb           URI Pattern                    Controller#Action
+todo_items GET        /todo_items(.:format)          todo_items#index
+           POST       /todo_items(.:format)          todo_items#create
+new_todo_item GET     /todo_items/new(.:format)      todo_items#new
 edit_todo_item GET    /todo_items/:id/edit(.:format) todo_items#edit
-todo_item GET    /todo_items/:id(.:format)      todo_items#show
-       PATCH  /todo_items/:id(.:format)      todo_items#update
-       PUT    /todo_items/:id(.:format)      todo_items#update
-       DELETE /todo_items/:id(.:format)      todo_items#destroy
+todo_item GET         /todo_items/:id(.:format)      todo_items#show
+          PATCH       /todo_items/:id(.:format)      todo_items#update
+          PUT         /todo_items/:id(.:format)      todo_items#update
+          DELETE      /todo_items/:id(.:format)      todo_items#destroy
 ```
+
+The rake routes task shows us a list of all the routes defined in `config/routes.rb`. We get a lot of stuff from that one line of code. What `resources` does is define a RESTful resource. Just like we learned, a RESTful resource follows a particular pattern.
+
+```
+GET /todo_items
+Gets the list of all todos.
+
+GET /todo_items/:id
+Gets a single todo.
+
+POST /todo_items
+Creates a new todo.
+
+PUT (or PATCH) /todo_items/:id
+Updates a single todo.
+
+DELETE /todo_items/:id
+Deletes a single todo.
+```
+
+All this and more are generated for free by declaring that a TodoItem is a “resource”.
