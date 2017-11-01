@@ -198,3 +198,11 @@ The above was generated automatically by declaring that a TodoItem is a “resou
 Let’s start up the server and navigate to `http://<box-name>.codio.io:3000/todo_items`.
 
 ![todo_list empty](./images/todo_items_empty.png)
+
+Rails made a complete webapp for us, with multiple pages and links. For example, we can create a new todo by navigating to `http://<box-name>.codio.io:3000/todo_items/new`.
+
+![todo_list new](./images/todo_items_new.png)
+
+Enter a description and click the `Create Todo item` button:
+
+![todo_list new](./images/todo_items_new_confirmed.png)
