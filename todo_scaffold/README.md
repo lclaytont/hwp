@@ -191,4 +191,6 @@ DELETE /todo_items/:id
 Deletes a single todo.
 ```
 
-All this and more are generated for free by declaring that a TodoItem is a “resource”.
+The above was generated automatically by declaring that a TodoItem is a “resource”.
+
+---
