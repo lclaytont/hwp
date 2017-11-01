@@ -13,13 +13,9 @@ After successful completion of this project, you will be able to:
 - destroy a scaffold
 
 # Problem Statement
-Assume that you work for a company that paid to send you to I/O Avenue. You just received an urgent email from your project manager.
+Assume that you work for a company that paid to send you to I/O Avenue. You just received an urgent email from your project manager:
 
-**From:**    Project Manager <pm@ioavenue.com>\n
-**To:**	 	   Junior Dev <jrdev@goodluck.co>\n
-**Subject:** Rails Project\n
-
-Junior Dev,
+_Junior Dev,
 
 We’re all excited about the progress you’ve made so far. Things are going very well.
 
@@ -32,7 +28,7 @@ I know you haven't really started learning how to build a site with Rails, but w
 Create a simple ToDo List webapp. It doesn’t have to look pretty, but it should work.
 
 Thanks for all your hard work,
-PM
+PM_
 
 ---
 
