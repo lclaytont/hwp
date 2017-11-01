@@ -59,3 +59,84 @@ $ cd todo
 Note: Rails automatically initializes git when creating a new project. Thus, you do not need to do `$ git init`. To verify, there should be a `.git` folder in `/todo`.
 
 ---
+
+What we need to create is called a scaffold. What’s that?
+
+```
+$ rails g scaffold
+
+Usage:
+  rails generate scaffold NAME [field[:type][:index] field[:type][:index]] [options]
+...
+Description:
+    Scaffolds an entire resource, from model and migration to controller and
+    views, along with a full test suite. The resource is ready to use as a
+    starting point for your RESTful, resource-oriented application.
+...
+```
+
+This sounds like exactly what we need. A whole webapp, model, migration, controller, and views - all in one command.
+
+Take a few moments to think about what a ToDo list item should have or look like. At a minimum, it should have description.
+
+Let's create a ToDo list item with a description.
+
+```
+$ rails g scaffold todo_item description:string --javascript-engine=js--stylesheet-engine=css
+
+Running via Spring preloader in process 3782
+      invoke  active_record
+      create    db/migrate/20171101211821_create_todo_items.rb
+      create    app/models/todo_item.rb
+      invoke    test_unit
+      create      test/models/todo_item_test.rb
+      create      test/fixtures/todo_items.yml
+      invoke  resource_route
+       route    resources :todo_items
+      invoke  scaffold_controller
+      create    app/controllers/todo_items_controller.rb
+      invoke    erb
+      create      app/views/todo_items
+      create      app/views/todo_items/index.html.erb
+      create      app/views/todo_items/edit.html.erb
+      create      app/views/todo_items/show.html.erb
+      create      app/views/todo_items/new.html.erb
+      create      app/views/todo_items/_form.html.erb
+      invoke    test_unit
+      create      test/controllers/todo_items_controller_test.rb
+      invoke    helper
+      create      app/helpers/todo_items_helper.rb
+      invoke      test_unit
+      invoke    jbuilder
+      create      app/views/todo_items/index.json.jbuilder
+      create      app/views/todo_items/show.json.jbuilder
+      create      app/views/todo_items/_todo_item.json.jbuilder
+      invoke  test_unit
+      create    test/system/todo_items_test.rb
+      invoke  assets
+       error    js--stylesheet-engine=css [not found]
+      invoke    scss
+      create      app/assets/stylesheets/todo_items.scss
+      invoke  scss
+      create    app/assets/stylesheets/scaffolds.scss
+```
+
+By default, Rails prefers that I use CoffeeScript and SCSS, but we haven’t learned that, so we told Rails to scaffold some plain JavaScript and CSS for us instead (via the options).
+
+---
+
+This generator creates a whole bunch of stuff. Let’s check the migration.
+
+```
+db/migrate/20171101211821_create_todo_items.rb
+
+class CreateTodoItems < ActiveRecord::Migration[5.1]
+  def change
+    create_table :todo_items do |t|
+      t.string :description
+
+      t.timestamps
+    end
+  end
+end
+```
