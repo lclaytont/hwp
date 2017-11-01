@@ -205,4 +205,8 @@ Rails made a complete webapp for us, with multiple pages and links. For example,
 
 Enter a description and click the `Create Todo item` button:
 
-![todo_list new](./images/todo_items_new_confirmed.png)
+![todo_list confirmed](./images/todo_items_new_confirmed.png)
+
+We can go back to our `/todo_items` URL and we should now see:
+
+![todo_list](./images/todo_items.png)
