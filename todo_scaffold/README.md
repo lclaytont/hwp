@@ -77,7 +77,7 @@ This sounds like exactly what we need. A whole webapp, model, migration, control
 
 Take a few moments to think about what a ToDo list item should have or look like. At a minimum, it should have description.
 
-Let's create a ToDo list item with a description: `$ rails g scaffold todo_item description:string --javascript-engine=js--stylesheet-engine=css`
+Let's create a ToDo list item with a description: `$ rails g scaffold todo_item description:string --javascript-engine=js --stylesheet-engine=css`
 
 ```
 Running via Spring preloader in process 3782
