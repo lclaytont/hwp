@@ -16,6 +16,7 @@ For your final project, you are expected to work in teams of two. Below are the 
 ### Deliverables
 - 11/19/2017 11:59PM: Idea and assignment of tasks for each teammate.
 - 11/21/2017 11:59PM: Wireframes for your views. ERDs for your models.
+- 11/25/2017 11:59PM: Final Resume Due
 - 11/27/2017 5PM: Code Review 1
 - 11/29/2017 5PM: Code Review 2
 - 11/30/2017 11:59PM: Slides for Pitch (Draft)
