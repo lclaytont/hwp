@@ -40,7 +40,7 @@ As a developer, it is important to have a place to refer people to in order to v
 ### **Phase 2**
 * Convert your portfolio website to a Rails app
 * Push your portfolio website to Heroku
-* Add your custom domain name (www.myname.com or www.myname.co)
+* Add your custom domain name (www.myname.com or www.myname.co): https://devcenter.heroku.com/articles/custom-domains
 
 #### Instructions for Converting Your Website to a Rails App
 
