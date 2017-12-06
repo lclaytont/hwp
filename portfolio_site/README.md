@@ -177,6 +177,12 @@ Finally, copy your CSS content from your Portfolio project into `app/assets/styl
 
 You are now done with converting your Portfolio website to a Rails App.
 
+As always, let's add the changes we have made to Git:
+```
+$ git add .
+$ git commit -m "Added content for personal site"
+```
+
 ---
 
 #### Instructions for Pushing to Github
@@ -244,4 +250,21 @@ $ sudo apt-get install heroku
 ```
 Once installed, you can use the `heroku` command from your command shell. Log in using the email address and password you used when creating your Heroku account: `$ heroku login`. If you've successfully logged in, you should see a message: `Logged in as youremail@mail.com.`
 
-Create an app on Heroku, which prepares Heroku to receive your source code: `$ heroku create`.
+Create an app on Heroku, which prepares Heroku to receive your source code: `$ heroku create`. You should see something similar to the following output:
+```
+Creating app... done, ⬢ salty-castle-49500
+https://salty-castle-49500.herokuapp.com/ | https://git.heroku.com/salty-castle-49500.git
+```
+
+Take note of the herokuapp.com URL. This will be the Heroku URL you will use to visit your site.
+
+Now deploy your code: `$ git push heroku master`. You will likely get the following error: `error: failed to push some refs to 'https://git.heroku.com/salty-castle-49500.git'`. Upon further inspection, you will notice an error: `Gemfile.lock required. Please check it in.` We can verify that `Gemfile.lock` has not been added to git by `$ git status`.
+
+Let's fix this by adding the Gemlock.file:
+```
+$ git add Gemfile.lock
+$ git commit -m "Added Gemfile.lock"
+$ git push
+```
+
+Retry pushing to Heroku: `$ git push heroku master`. After waiting for a bit, your Rails app should be successfully deployed to Heroku. **Virtual High Five!**
