@@ -181,7 +181,9 @@ As always, let's add the changes we have made to Git:
 ```
 $ git add .
 $ git commit -m "Added content for personal site"
+$ git push -u origin master
 ```
+If you get an error pushing to GitHub, read the next section.
 
 ---
 
@@ -225,7 +227,8 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHSnjS6UaBq/Nr71P+GYMwTjHLDtEQ0sWl4yDliSdY
 ```
 
 Once you've copied the key, add it to GitHub:
-1. Go to `Settings => SSH and GPG keys` and selecting `New SSH Key`.
+1. On GitHub.com, select your profile in the top right and go to `Settings => SSH and GPG keys`.
+1. Selecting `New SSH Key`.
 1. For the Title, you can add `Codio <Box-Name>`. For example, Title: `Codio Compact Lima`.
 1. For the Key, paste it from your clipboard. For example, Key:
 ```
@@ -258,7 +261,9 @@ https://salty-castle-49500.herokuapp.com/ | https://git.heroku.com/salty-castle-
 
 Take note of the herokuapp.com URL. This will be the Heroku URL you will use to visit your site.
 
-Now deploy your code: `$ git push heroku master`. You will likely get the following error: `error: failed to push some refs to 'https://git.heroku.com/salty-castle-49500.git'`. Upon further inspection, you will notice an error: `Gemfile.lock required. Please check it in.` We can verify that `Gemfile.lock` has not been added to git by `$ git status`.
+Now deploy your code: `$ git push heroku master`.
+
+You may get the following error: `error: failed to push some refs to 'https://git.heroku.com/salty-castle-49500.git'`. Upon further inspection, you will notice an error: `Gemfile.lock required. Please check it in.` We can verify that `Gemfile.lock` has not been added to git by `$ git status`.
 
 Let's fix this by adding the Gemlock.file:
 ```
