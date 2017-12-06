@@ -75,7 +75,7 @@ Select the following options:
 1. You will see the following message: The authenticity of host 'github.com (192.30.253.113)' can't be established.
 RSA key fingerprint is 16:27:ac:...:df:a6:48.
 Are you sure you want to continue connecting (yes/no)? Choose `yes`
-1. You may get the following warning: `fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.` Ignore this.
+1. You may get the following warning: `fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.` Ignore this for now.
 1. Wait until the installation process is completed.
 
 Once the installation process is completed:
@@ -179,4 +179,69 @@ You are now done with converting your Portfolio website to a Rails App.
 
 ---
 
+#### Instructions for Pushing to Github
+
+Rails Composer should have created a GitHub repository for your Rails app. If you received the `fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.` warning, complete this section. If you did not, push to GitHub and move onto the next section.
+
+You received the fatal warning because your Codio box does not have SSH keys to connect to GitHub. Don't worry too much about the technicalities, just follow along.
+
+First you'll want to cd into your .ssh directory: `$ cd ~/.ssh && ssh-keygen`
+
+Your terminal will display the following:
+
+```
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/codio/.ssh/id_rsa):
+```
+
+Press `Enter` to use the default filename.
+
+You may receive a the following message: `/home/codio/.ssh/id_rsa already exists. Overwrite (y/n)?` Choose `y`.
+
+You will be asked to enter a password (you can press `Enter` if you want to provide no password):
+```
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+```
+
+Finally, you will the terminal will display a message that looks like:
+```
+Your identification has been saved in /home/codio/.ssh/id_rsa.
+Your public key has been saved in /home/codio/.ssh/id_rsa.pub.
+The key fingerprint is:
+56:ee:dd:...:e3:ab:ff
+```
+
+Next you need to copy the SSH key. Execute `$ cat id_rsa.pub` to output the SSH key to the terminal. Copy its output to your clipboard. The output should look something like:
+```
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHSnjS6UaBq/Nr71P+GYMwTjHLDtEQ0sWl4yDliSdYdp0y9WPNnLWtC0ldrVxbLBQfpkKBlpy8vbaNjmBig1D2EOcr
+3mfhGzsjKDtjr3ubAeNMnq2Nti3wPyl0ap4TgIl8ETxSioIbUKH308EBVFAwEqwy7IxBzwVDF4qvCTf4TYKhjKzTePgVn/RBjZ codio@compact-lima
+```
+
+Once you've copied the key, add it to GitHub:
+1. Go to `Settings => SSH and GPG keys` and selecting `New SSH Key`.
+1. For the Title, you can add `Codio <Box-Name>`. For example, Title: `Codio Compact Lima`.
+1. For the Key, paste it from your clipboard. For example, Key:
+```
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHSnjS6UaBq/Nr71P+GYMwTjHLDtEQ0sWl4yDliSdYdp0y9WPNnLWtC0ldrVxbLBQfpkKBlpy8vbaNjmBig1D2EOcr
+3mfhGzsjKDtjr3ubAeNMnq2Nti3wPyl0ap4TgIl8ETxSioIbUKH308EBVFAwEqwy7IxBzwVDF4qvCTf4TYKhjKzTePgVn/RBjZ codio@compact-lima
+```
+
+Make sure you are in your Rails project and push to GitHub: `$ git push -u origin master`. You will be asked for the password that you entered when creating the SSH key: `Enter passphrase for key '/home/codio/.ssh/id_rsa':`. After entering the password, you should see that your code is successfully pushed to GitHub.
+
+---
+
 #### Instructions for Deploying to Heroku
+
+In order to deploy our Rails app to Heroku, we will follow the **Getting Started on Heroku with Ruby** instructions on Heroku: https://devcenter.heroku.com/articles/getting-started-with-ruby#set-up
+
+If this is your first time using Heroku in your Codio box, we need to install the Heroku Command Line Interface (CLI). The following will add our apt repository and install the CLI:
+```
+$ sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
+$ curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
+$ sudo apt-get update
+$ sudo apt-get install heroku
+```
+Once installed, you can use the `heroku` command from your command shell. Log in using the email address and password you used when creating your Heroku account: `$ heroku login`. If you've successfully logged in, you should see a message: `Logged in as youremail@mail.com.`
+
+Create an app on Heroku, which prepares Heroku to receive your source code: `$ heroku create`.
