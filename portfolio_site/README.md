@@ -93,6 +93,89 @@ end
 
 By pointing the `root` to the `index` action of the `visitors` controller, the user will see the landing page when navigating to your URL.
 
+**Now that we have our Rails app up and running, let's add in the HTML content from our Portfolio project.**
+
+Open `app/views/layouts/_navigation.html.erb` and replace its contents with the following:
+```
+<%# navigation styled for Bootstrap 4.0 %>
+<nav class="navbar navbar-light bg-light">
+    <div class="container">
+        <%= link_to "Your Name Goes Here", root_path, class: 'navbar-brand' %>
+        <ul class="nav navbar-nav">
+            <%= render 'layouts/navigation_links' %> <!-- All your other links should go in the navigation_links layout file. -->
+        </ul>
+    </div>
+</nav>
+```
+
+Note: Make sure to replace `Your Name Goes Here` with your full (legal) name.
+
+
+Open `app/views/visitors/index.html.erb` in the Codio text editor and replace the `<h3>Welcome</h3>` with your HTML content. Since we already added the `navbar`, do not add this to `index`. For example:
+```
+<div class="container" id="page-content">
+        <!-- Content here -->
+        <div class="row">
+            <div class="col-sm-4">
+                <img id="profile-pic" src="https://avatars2.githubusercontent.com/u/5952189?s=460&v=4" alt="Profile Image">
+            </div>
+            <div class="col-sm-8">
+                <h1>About Me</h1>
+
+                <p>
+                    Spicy jalapeno bacon ipsum dolor amet turkey cow sausage, venison pork hamburger
+                    andouille shoulder bresaola ribeye ham drumstick flank. Pancetta turducken salami,
+                    prosciutto frankfurter cow ham. Pork chop biltong ham chicken boudin jerky tenderloin.
+                    Shoulder chicken short loin, kielbasa shank pork loin brisket turducken filet mignon
+                    jerky cupim pancetta. Pig cupim sausage chicken fatback bresaola bacon, ham tenderloin
+                    short ribs.
+                </p>
+
+                <p>
+                    Short loin ground round corned beef, prosciutto kielbasa leberkas flank rump chicken
+                    tongue cupim picanha andouille. Sirloin bresaola hamburger bacon, jowl t-bone salami
+                    pastrami shankle frankfurter prosciutto meatloaf chuck alcatra meatball. Pancetta chuck
+                    tri-tip fatback, boudin turkey pork loin doner. Biltong short ribs swine boudin andouille drumstick.
+                </p>
+
+                <a class="btn btn-outline-dark" href="https://github.com/ryankopinsky" role="button" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
+```
+
+Note: Make sure to add your own Profile Image and link to your GitHub.
+
+Finally, copy your CSS content from your Portfolio project into `app/assets/stylesheets/application.css.scss`. For example:
+```
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+#page-content {
+    margin-top: 60px;
+}
+
+#profile-pic {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+}
+```
+
+You are now done with converting your Portfolio website to a Rails App.
 
 ---
 
