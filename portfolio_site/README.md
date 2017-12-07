@@ -242,7 +242,7 @@ Make sure you are in your Rails project and push to GitHub: `$ git push -u origi
 
 #### Instructions for Deploying to Heroku
 
-In order to deploy our Rails app to Heroku, we will follow the **Getting Started on Heroku with Ruby** instructions on Heroku: https://devcenter.heroku.com/articles/getting-started-with-ruby#set-up
+In order to deploy our Rails app to Heroku, we will mirror the **Getting Started on Heroku with Ruby** instructions on Heroku (you can follow instructions in this guide instead of Heroku's): https://devcenter.heroku.com/articles/getting-started-with-ruby#set-up
 
 If this is your first time using Heroku in your Codio box, we need to install the Heroku Command Line Interface (CLI). The following will add our apt repository and install the CLI:
 ```
