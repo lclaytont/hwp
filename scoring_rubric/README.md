@@ -18,7 +18,7 @@
 | 4 | All the project requirements were met satisfactorily. |
 | 3 | Most of the project requirements were met, but you may have missed a point of two. |
 | 2 |Some of the project requirements were met. The project may have been turned in late. |
-| 1 | There is nothing but cobwebs inside your program. Your game was turned in late, likely a few years late. |
+| 1 | There is nothing but cobwebs inside your program. Your project was turned in late, likely a few years late. |
 
 ### DRYness
 
