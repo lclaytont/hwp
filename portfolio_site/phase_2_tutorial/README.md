@@ -5,7 +5,7 @@
 
 #### Instructions for Converting Your Website to a Rails App
 
-In the projects folder, create a new Rails app using **Rails Composer**: `$ rails new personal_site_rails -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb`
+In the projects folder, create a new Rails app using **Rails Composer**: `$ rails new portfolio_site_rails -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb`
 
 Select the following options:
 1. Build a starter application? Choose `3` => Custom application (experimental)
@@ -40,7 +40,7 @@ Are you sure you want to continue connecting (yes/no)? Choose `yes`
 1. Wait until the installation process is completed.
 
 Once the installation process is completed:
-1. `cd` into the newly created directory: `$ cd personal_site_rails/`
+1. `cd` into the newly created directory: `$ cd portfolio_site_rails/`
 1. Run the Rails server: `$ rails s`
 1. Go into your browser and open the URL: `http://<box-name>.codio.io:3000`
 1. You should now see a blank page with a **Welcome** header. This is your *homepage*. Rails Composer created a `visitors` controller which serves as the landing page for the app.
@@ -141,7 +141,7 @@ You are now done with converting your Portfolio website to a Rails App.
 As always, let's add the changes we have made to Git:
 ```
 $ git add .
-$ git commit -m "Added content for personal site"
+$ git commit -m "Added content for portfolio site"
 $ git push -u origin master
 ```
 If you get an error pushing to GitHub, read the next section.
