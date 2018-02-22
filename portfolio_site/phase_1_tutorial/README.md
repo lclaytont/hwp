@@ -24,6 +24,7 @@ There are several elements an HTML document should have to be considered valid H
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- responsive viewport meta tag -->
+
     <!-- Update your website title -->
     <title>My Website</title>
 
