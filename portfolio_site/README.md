@@ -5,8 +5,7 @@ As a developer, it is important to have a place to refer people to in order to v
 ### **Your portfolio website should have the following information:**
 * A profile image of yourself  
 * A short bio of yourself  
-* Social links (LinkedIn, Github, Twitter)  
-* Your contact information (name, email, and phone number)  
+* Social and contact links (LinkedIn, Github, Email)
 * Projects (There must a way to link out to your projects whether they are live or on Github)  
 
 

@@ -4,8 +4,7 @@ In this tutorial, you will learn how to build your very own website using HTML, 
 Throughout this example, we will build a portfolio website. The site requirements are as follows:
 * A profile image of yourself  
 * A short bio of yourself  
-* Social links (LinkedIn, Github, Twitter)  
-* Your contact information (name, email, and phone number)  
+* Social and contact links (LinkedIn, Github, Email)   
 * Projects (There must a way to link out to your projects whether they are live or on Github)   
 
 ### Part 1 - HTML
@@ -156,3 +155,42 @@ Your `index.html` should look like:
 ![resized_headshot](./images/resized_headshot.png)
 
 Much better!
+
+#### Add Your Short Bio
+
+Your bio should tell the story of you. Who are you, what is your background, what are your (technical) skills, what are your goals and interests etc.
+
+For phase 1 of your personal site, write 1 to 2 short paragraphs for your bio. This tutorial will use sample text generated at https://www.lipsum.com. You should use your actual bio!
+
+You can add your bio content as paragraph text using the `p` tag. Your `index.html` should look like:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- responsive viewport meta tag -->
+
+    <!-- Update your website title -->
+    <title>Ryan Kopinsky</title>
+
+    <!-- Link Bootstrap CSS here -->
+
+    <!-- Link custom CSS here -->
+  </head>
+  <body>
+    <!-- Add your content here -->
+    <h1>Ryan Kopinsky</h1>
+
+    <img src="images/professional_headshot.jpg" alt="Headshot for Ryan Kopinsky" width="300px">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin gravida tellus, in mattis magna. Donec non leo quis tellus tempus consectetur. Quisque ultricies lectus varius velit ultricies facilisis ut placerat nulla. In est nibh, malesuada a varius non, suscipit sed leo. Sed commodo laoreet commodo. Phasellus ac velit fermentum, convallis augue non, tempus magna.</p>
+
+    <p>In vel velit metus. Vestibulum non nisi lacinia, ullamcorper justo rutrum, luctus erat. Curabitur pellentesque bibendum pulvinar. Duis porttitor bibendum hendrerit. Praesent commodo ex sit amet tortor placerat imperdiet. Pellentesque in volutpat risus. Nam vitae gravida urna. Aenean eu nisi ut velit pharetra efficitur.</p>
+
+    <!-- At the end of all your content, add Bootstrap JS here -->
+  </body>
+</html>
+```
+
+![added_bio](./images/added_bio.png)
