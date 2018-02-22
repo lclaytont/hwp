@@ -57,7 +57,9 @@ In order to test this HTML, go to your Codio Filetree and right-click on `index.
 
 ![hello_world_test](./images/hello_world_test.png)
 
-We are now ready to add content to our personal site. Update your site title to display your first and last name: `<title>John Doe</title>`. Also add an `h1` tag to display your name on the page: `<h1>John Doe</h1>`. Your `index.html` should look like:
+#### Add Your Name
+
+We are now ready to add content to our personal site. Update your site title to display your first and last name: `<title>Ryan Kopinsky</title>`. Also add an `h1` tag to display your name on the page: `<h1>Ryan Kopinsky</h1>`. Your `index.html` should look like:
 
 ```html
 <!DOCTYPE html>
@@ -67,7 +69,7 @@ We are now ready to add content to our personal site. Update your site title to 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- responsive viewport meta tag -->
 
     <!-- Update your website title -->
-    <title>John Doe</title>
+    <title>Ryan Kopinsky</title>
 
     <!-- Link Bootstrap CSS here -->
 
@@ -75,7 +77,7 @@ We are now ready to add content to our personal site. Update your site title to 
   </head>
   <body>
     <!-- Add your content here -->
-    <h1>John Doe</h1>
+    <h1>Ryan Kopinsky</h1>
 
     <!-- At the end of all your content, add Bootstrap JS here -->
   </body>
@@ -83,3 +85,74 @@ We are now ready to add content to our personal site. Update your site title to 
 ```
 
 ![added_name](./images/added_name.png)
+
+#### Add Your Headshot
+
+Let's continue adding content. As per the site requirements, we should now add a professional headshot. We can add an image by doing the following:
+1. In your `portfolio_site` folder, create a new folder called `images`: `$ mkdir images`.
+1. Upload your professional headshot (in either .PNG or .JPG format) by right-clicking on the newly-created `images` folder. Select `Upload` and use the dialog to upload your image.
+![upload_image_to_codio](./images/upload_image_to_codio.png)
+![uploaded_image_to_codio](./images/uploaded_image_to_codio.png)
+1. Use an `img` tag to place the image on the webpage: `<img src="images/professional_headshot" alt="Headshot for Ryan Kopinsky">`.
+
+Your `index.html` should look like:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- responsive viewport meta tag -->
+
+    <!-- Update your website title -->
+    <title>Ryan Kopinsky</title>
+
+    <!-- Link Bootstrap CSS here -->
+
+    <!-- Link custom CSS here -->
+  </head>
+  <body>
+    <!-- Add your content here -->
+    <h1>Ryan Kopinsky</h1>
+
+    <img src="images/professional_headshot.jpg" alt="Headshot for Ryan Kopinsky">
+
+    <!-- At the end of all your content, add Bootstrap JS here -->
+  </body>
+</html>
+```
+
+![added_headshot](./images/added_headshot.png)
+
+Oops! That image is way too big (the original image is 1000px wide and 1250px high). We can constrain its size by providing a `height` and/or `width` attribute. It is important to note that you always want to maintain the image's aspect ratio (so it doesn't looked squished). Thus, when providing size constraints, provide either a value for `height` or `width`. The other value will automatically be calculated for you to maintain the image's aspect ratio: `<img src="images/professional_headshot.jpg" alt="Headshot for Ryan Kopinsky" width="300px">`.
+
+Your `index.html` should look like:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- responsive viewport meta tag -->
+
+    <!-- Update your website title -->
+    <title>Ryan Kopinsky</title>
+
+    <!-- Link Bootstrap CSS here -->
+
+    <!-- Link custom CSS here -->
+  </head>
+  <body>
+    <!-- Add your content here -->
+    <h1>Ryan Kopinsky</h1>
+
+    <img src="images/professional_headshot.jpg" alt="Headshot for Ryan Kopinsky" width="300px">
+
+    <!-- At the end of all your content, add Bootstrap JS here -->
+  </body>
+</html>
+```
+
+![resized_headshot](./images/resized_headshot.png)
+
+Much better!
