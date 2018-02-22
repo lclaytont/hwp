@@ -1,9 +1,9 @@
-### **Phase 2**
+## **Phase 2**
 * Convert your portfolio website to a Rails app
 * Push your portfolio website to Heroku
 * Add your custom domain name (www.myname.com or www.myname.co): https://www.namecheap.com/support/knowledgebase/article.aspx/9737/2208/pointing-a-domain-to-the-heroku-app
 
-#### Instructions for Converting Your Website to a Rails App
+### Instructions for Converting Your Website to a Rails App
 
 In the projects folder, create a new Rails app using **Rails Composer**: `$ rails new portfolio_site_rails -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb`
 
@@ -148,7 +148,7 @@ If you get an error pushing to GitHub, read the next section.
 
 ---
 
-#### Instructions for Pushing to Github
+### Instructions for Pushing to Github
 
 Rails Composer should have created a GitHub repository for your Rails app. If you received the `fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.` warning, complete this section. If you did not, push to GitHub and move onto the next section.
 
@@ -201,7 +201,7 @@ Make sure you are in your Rails project and push to GitHub: `$ git push -u origi
 
 ---
 
-#### Instructions for Deploying to Heroku
+### Instructions for Deploying to Heroku
 
 In order to deploy our Rails app to Heroku, we will mirror the **Getting Started on Heroku with Ruby** instructions on Heroku (you can follow instructions in this guide instead of Heroku's): https://devcenter.heroku.com/articles/getting-started-with-ruby#set-up
 
