@@ -39,3 +39,20 @@ There are several elements an HTML document should have to be considered valid H
   </body>
 </html>
 ```
+
+Before we add content, let's make sure everything is working with a **Hello World** example. Add `<h1>Hello World</h1>` to `<body>`:
+
+```html
+...
+  <body>
+    <!-- Add your content here -->
+    <h1>Hello World</h1>
+
+    <!-- At the end of all your content, add Bootstrap JS here -->
+  </body>
+...
+```
+
+In order to test this HTML, go to your Codio Filetree and right-click on `index.html`. Select `Preview static`. A browser-like window will open in a new tab and you should see your webpage. Currently the page should only display Hello World. Anytime you add some new HTML, you can refresh this page to see the result.
+
+![hello_world_test](./images/hello_world_test.png)
