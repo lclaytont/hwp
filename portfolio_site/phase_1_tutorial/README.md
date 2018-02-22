@@ -56,3 +56,30 @@ Before we add content, let's make sure everything is working with a **Hello Worl
 In order to test this HTML, go to your Codio Filetree and right-click on `index.html`. Select `Preview static`. A browser-like window will open in a new tab and you should see your webpage. Currently the page should only display Hello World. Anytime you add some new HTML, you can refresh this page to see the result.
 
 ![hello_world_test](./images/hello_world_test.png)
+
+We are now ready to add content to our personal site. Update your site title to display your first and last name: `<title>John Doe</title>`. Also add an `h1` tag to display your name on the page: `<h1>John Doe</h1>`. Your `index.html` should look like:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- responsive viewport meta tag -->
+
+    <!-- Update your website title -->
+    <title>John Doe</title>
+
+    <!-- Link Bootstrap CSS here -->
+
+    <!-- Link custom CSS here -->
+  </head>
+  <body>
+    <!-- Add your content here -->
+    <h1>John Doe</h1>
+
+    <!-- At the end of all your content, add Bootstrap JS here -->
+  </body>
+</html>
+```
+
+![added_name](./images/added_name.png)
