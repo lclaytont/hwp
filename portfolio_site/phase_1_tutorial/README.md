@@ -5,7 +5,7 @@ Throughout this example, we will build a portfolio website. The site requirement
 * A profile image of yourself  
 * A short bio of yourself  
 * Social and contact links (LinkedIn, Github, Email)   
-* Projects (There must a way to link out to your projects whether they are live or on Github)   
+* [Bonus] Projects (link out to your projects whether they are live or on Github)
 
 ### Part 1 - HTML
 
@@ -194,3 +194,49 @@ You can add your bio content as paragraph text using the `p` tag. Your `index.ht
 ```
 
 ![added_bio](./images/added_bio.png)
+
+#### Add Social and Contact Links
+
+Now it's time to add social and contact links so people can reach out to us! In this tutorial, we will add links to LinkedIn, Github, and Email. You are free to add more, as appropriate:
+1. Add an `a` tag with a link to your LinkedIn profile URL: `<a href="https://www.linkedin.com/in/ryankopinsky/" target="_blank">LinkedIn</a>`
+1. Add an `a` tag with a link to your GitHub profile URL: `<a href="https://github.com/ryankopinsky" target="_blank">GitHub</a>`
+1. Add an `a` tag with a `mailto:` link to your Email Address: `<a href="mailto:ryan@ioavenue.com">Email</a>`
+
+Note: `target="_blank"` instructs the browser to open the link in a new tab.
+
+Your `index.html` should look like:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- responsive viewport meta tag -->
+
+    <!-- Update your website title -->
+    <title>Ryan Kopinsky</title>
+
+    <!-- Link Bootstrap CSS here -->
+
+    <!-- Link custom CSS here -->
+  </head>
+  <body>
+    <!-- Add your content here -->
+    <h1>Ryan Kopinsky</h1>
+
+    <img src="images/professional_headshot.jpg" alt="Headshot for Ryan Kopinsky" width="300px">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin gravida tellus, in mattis magna. Donec non leo quis tellus tempus consectetur. Quisque ultricies lectus varius velit ultricies facilisis ut placerat nulla. In est nibh, malesuada a varius non, suscipit sed leo. Sed commodo laoreet commodo. Phasellus ac velit fermentum, convallis augue non, tempus magna.</p>
+
+    <p>In vel velit metus. Vestibulum non nisi lacinia, ullamcorper justo rutrum, luctus erat. Curabitur pellentesque bibendum pulvinar. Duis porttitor bibendum hendrerit. Praesent commodo ex sit amet tortor placerat imperdiet. Pellentesque in volutpat risus. Nam vitae gravida urna. Aenean eu nisi ut velit pharetra efficitur.</p>
+
+    <a href="https://www.linkedin.com/in/ryankopinsky/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/ryankopinsky" target="_blank">GitHub</a>
+    <a href="mailto:ryan@ioavenue.com">Email</a>
+
+    <!-- At the end of all your content, add Bootstrap JS here -->
+  </body>
+</html>
+```
+
+![added_links](./images/added_links.png)

@@ -6,7 +6,7 @@ As a developer, it is important to have a place to refer people to in order to v
 * A profile image of yourself  
 * A short bio of yourself  
 * Social and contact links (LinkedIn, Github, Email)
-* Projects (There must a way to link out to your projects whether they are live or on Github)  
+* [Bonus] Projects (link out to your projects whether they are live or on Github) 
 
 
 ### **Phase 1**
