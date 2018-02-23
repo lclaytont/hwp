@@ -240,3 +240,53 @@ Your `index.html` should look like:
 ```
 
 ![added_links](./images/added_links.png)
+
+#### Wrapping Up
+
+We now have all the content and HTML for phase 1 of our portfolio site. To close out the HTML part of this tutorial, let's refactor our `index.html` file as follows:
+
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- responsive viewport meta tag -->
+
+    <!-- Update your website title -->
+    <title>Ryan Kopinsky</title>
+
+    <!-- Link Bootstrap CSS here -->
+
+    <!-- Link custom CSS here -->
+  </head>
+  <body>
+    <!-- Add your content here -->
+    <h1>Ryan Kopinsky</h1>
+
+    <!-- Headshot -->
+    <img src="images/professional_headshot.jpg" alt="Headshot for Ryan Kopinsky" width="300px">
+
+    <!-- Short Bio -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin gravida tellus, in mattis magna. Donec non leo quis tellus tempus consectetur. Quisque ultricies lectus varius velit ultricies facilisis ut placerat nulla. In est nibh, malesuada a varius non, suscipit sed leo. Sed commodo laoreet commodo. Phasellus ac velit fermentum, convallis augue non, tempus magna.</p>
+
+    <p>In vel velit metus. Vestibulum non nisi lacinia, ullamcorper justo rutrum, luctus erat. Curabitur pellentesque bibendum pulvinar. Duis porttitor bibendum hendrerit. Praesent commodo ex sit amet tortor placerat imperdiet. Pellentesque in volutpat risus. Nam vitae gravida urna. Aenean eu nisi ut velit pharetra efficitur.</p>
+
+    <!-- Social and Contact Links -->
+    <a href="https://www.linkedin.com/in/ryankopinsky/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/ryankopinsky" target="_blank">GitHub</a>
+    <a href="mailto:ryan@ioavenue.com">Email</a>
+
+    <!-- At the end of all your content, add Bootstrap JS here -->
+  </body>
+</html>
+```
+
+For documentation purposes, we added 3 comments:
+1. `<!-- Headshot -->`
+1. `<!-- Short Bio -->`
+1. `<!-- Social and Contact Links -->`
+
+We are now done with **Part 1 - HTML**.
+
+---
