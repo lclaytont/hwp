@@ -406,3 +406,168 @@ body {
 ```
 
 When refreshing your page, it will look like nothing changed. However, under the hood, we improved our code by using a CSS style to set the size of our headshot.
+
+#### Layout
+
+Updating the layout of our website, requires both modifications to our HTML and CSS. For this section, we want to position our bio and social links next to the headshot. Thus, we will `div`ide our content as follows:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- responsive viewport meta tag -->
+
+    <!-- Update your website title -->
+    <title>Ryan Kopinsky</title>
+
+    <!-- Link Bootstrap CSS here -->
+
+    <!-- Link custom CSS here -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+  </head>
+  <body>
+    <!-- Add your content here -->
+    <h1>Ryan Kopinsky</h1>
+
+    <!-- Headshot -->
+    <div id="headshotContainer">
+      <img id="headshot" src="images/professional_headshot.jpg" alt="Headshot for Ryan Kopinsky">
+    </div>
+
+    <!-- About -->
+    <div id="aboutContainer">
+      <!-- Short Bio -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin gravida tellus, in mattis magna. Donec non leo quis tellus tempus consectetur. Quisque ultricies lectus varius velit ultricies facilisis ut placerat nulla. In est nibh, malesuada a varius non, suscipit sed leo. Sed commodo laoreet commodo. Phasellus ac velit fermentum, convallis augue non, tempus magna.</p>
+
+      <p>In vel velit metus. Vestibulum non nisi lacinia, ullamcorper justo rutrum, luctus erat. Curabitur pellentesque bibendum pulvinar. Duis porttitor bibendum hendrerit. Praesent commodo ex sit amet tortor placerat imperdiet. Pellentesque in volutpat risus. Nam vitae gravida urna. Aenean eu nisi ut velit pharetra efficitur.</p>
+
+      <!-- Social and Contact Links -->
+      <a href="https://www.linkedin.com/in/ryankopinsky/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/ryankopinsky" target="_blank">GitHub</a>
+      <a href="mailto:ryan@ioavenue.com">Email</a>
+    </div>
+
+    <!-- At the end of all your content, add Bootstrap JS here -->
+  </body>
+</html>
+```
+
+Notice we added two `div`s, each with their own `id` attribute so they can be referenced in our CSS stylesheet.
+
+Recall that `div` elements are `block`line elements; each `div` goes on a new line. We actually want our `div`s to be `display`ed side-by-side. Thus we need to add some CSS to update the `display` attribute of our `div`s:
+
+```CSS
+body {
+  margin-top: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 40px;
+}
+
+#headshot {
+  width: 300px; /* constrain the width */
+  height: auto; /* height automatically calculated to maintain aspect ratio */
+}
+
+#headshotContainer {
+  display: inline-block;
+}
+
+#aboutContainer {
+  display: inline-block;
+}
+```
+
+![inline_block](./images/inline_block.png)
+
+You may have noticed that nothing changed. Although our `div`s are now `inline-block` elements, they still take up the full width of the page. Thus, we need to adjust the `width`:
+
+```CSS
+body {
+  margin-top: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 40px;
+}
+
+#headshot {
+  width: 300px; /* constrain the width */
+  height: auto; /* height automatically calculated to maintain aspect ratio */
+}
+
+#headshotContainer {
+  display: inline-block;
+  width: 30%;
+}
+
+#aboutContainer {
+  display: inline-block;
+  width: 70%;
+}
+```
+
+![inline_block_width_adjusted](./images/inline_block_width_adjusted.png)
+
+Although the `width` of our `div`s has been adjusted, they are still not side-by-side. This is where silly HTML and CSS quirks come into play. The `inline-block` `div` elements automatically have a margin of `4px`. Thus, if we give one `div` a `width` of `30%` of our page, and the other `70%`, there isn't enough space for the `div` elements **and** their margins. There are a few solutions to this issue. We can either reduce the `width` of each `div` or apply a negative `margin` to our `div`. Let's use the latter to fix our issue:
+
+```CSS
+body {
+  margin-top: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 40px;
+}
+
+#headshot {
+  width: 300px; /* constrain the width */
+  height: auto; /* height automatically calculated to maintain aspect ratio */
+}
+
+#headshotContainer {
+  display: inline-block;
+  width: 30%;
+  margin: -4px;
+}
+
+#aboutContainer {
+  display: inline-block;
+  width: 70%;
+  margin: -4px;
+}
+```
+
+![inline_block_width_adjusted_margin_fix](./images/inline_block_width_adjusted_margin_fix.png)
+
+Now our content is side-by-side. However, our bio and social links seem to be vertically aligned to the bottom of the `div` container. Let's align our content to the top using: `vertical-align: top;`
+
+```CSS
+body {
+  margin-top: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 40px;
+}
+
+#headshot {
+  width: 300px; /* constrain the width */
+  height: auto; /* height automatically calculated to maintain aspect ratio */
+}
+
+#headshotContainer {
+  display: inline-block;
+  width: 30%;
+  margin: -4px;
+}
+
+#aboutContainer {
+  display: inline-block;
+  width: 70%;
+  margin: -4px;
+  vertical-align: top;
+}
+```
+
+![inline_block_width_adjusted_margin_fix_top](./images/inline_block_width_adjusted_margin_fix_top.png)
+
+There we go! We are now done with adjusting the layout of our website.
