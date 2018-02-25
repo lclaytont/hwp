@@ -729,3 +729,149 @@ Let's link to the CDN-hosted Bootstrap CSS and JS files:
 We added a `link` tag in our `head` to import Bootstrap CSS. Right before the closing `</body>` tag, we added 3 `script` tags to import Bootstrap JS. When we refresh our webpage, we notice a few changes:
 
 ![added_bootstrap](./images/added_bootstrap.png)
+
+#### Navbar
+
+Most websites have a `navbar`. Let's add the following HTML right after the opening `<body>` tag:
+
+```HTML
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">Ryan Kopinsky</a>
+</nav>
+```
+
+Since we are adding our name to the `navbar`, we can remove the `h1` tag that initially displayed our name.
+
+Your `index.html` should look like:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- responsive viewport meta tag -->
+
+    <!-- Update your website title -->
+    <title>Ryan Kopinsky</title>
+
+    <!-- Link Bootstrap CSS here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Link custom CSS here -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+  </head>
+  <body>
+    <!-- Add your content here -->
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">Ryan Kopinsky</a>
+    </nav>
+
+    <!-- Headshot -->
+    <div id="headshotContainer">
+      <img id="headshot" src="images/professional_headshot.jpg" alt="Headshot for Ryan Kopinsky">
+    </div>
+
+    <!-- About -->
+    <div id="aboutContainer">
+      <h2>About Me</h2>
+
+      <!-- Short Bio -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin gravida tellus, in mattis magna. Donec non leo quis tellus tempus consectetur. Quisque ultricies lectus varius velit ultricies facilisis ut placerat nulla. In est nibh, malesuada a varius non, suscipit sed leo. Sed commodo laoreet commodo. Phasellus ac velit fermentum, convallis augue non, tempus magna.</p>
+
+      <p>In vel velit metus. Vestibulum non nisi lacinia, ullamcorper justo rutrum, luctus erat. Curabitur pellentesque bibendum pulvinar. Duis porttitor bibendum hendrerit. Praesent commodo ex sit amet tortor placerat imperdiet. Pellentesque in volutpat risus. Nam vitae gravida urna. Aenean eu nisi ut velit pharetra efficitur.</p>
+
+      <!-- Social and Contact Links -->
+      <a href="https://www.linkedin.com/in/ryankopinsky/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/ryankopinsky" target="_blank">GitHub</a>
+      <a href="mailto:ryan@ioavenue.com">Email</a>
+    </div>
+
+    <!-- At the end of all your content, add Bootstrap JS here -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+```
+
+![added_navbar](./images/added_navbar.png)
+
+Our `navbar` is now on the page but looks weird with the padding on the left, top and right. Remember that we added padding to our body in the CSS part of this tutorial? Since Bootstrap comes with a lot of functionality and CSS styles, let's delete everything in our `custom.css` file. Temporarily, this will mess up our site. No worries.
+
+![reset_custom_css](./images/reset_custom_css.png)
+
+#### Bootstrap Container
+
+In this section, we will utilize a Bootstrap `container` `div` to setup a mobile-responsive layout. You can read more about Bootstrap `container`s here: http://getbootstrap.com/docs/4.0/layout/overview/.
+
+We will add all our website content (except our `navbar`) inside the following `div`:
+
+```html
+<div class="container">
+  <!-- Content here -->
+  <div class="row">
+    <!-- This is where all our website content will go -->
+  </div>
+</div>
+```  
+
+Your `index.html` should look like:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- responsive viewport meta tag -->
+
+    <!-- Update your website title -->
+    <title>Ryan Kopinsky</title>
+
+    <!-- Link Bootstrap CSS here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Link custom CSS here -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+  </head>
+  <body>
+    <!-- Add your content here -->
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">Ryan Kopinsky</a>
+    </nav>
+
+    <div class="container" id="page-content">
+      <!-- Content here -->
+      <div class="row">
+        <!-- Headshot -->
+        <div id="headshotContainer">
+          <img id="headshot" src="images/professional_headshot.jpg" alt="Headshot for Ryan Kopinsky">
+        </div>
+
+        <!-- About -->
+        <div id="aboutContainer">
+          <h2>About Me</h2>
+
+          <!-- Short Bio -->
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin gravida tellus, in mattis magna. Donec non leo quis tellus tempus consectetur. Quisque ultricies lectus varius velit ultricies facilisis ut placerat nulla. In est nibh, malesuada a varius non, suscipit sed leo. Sed commodo laoreet commodo. Phasellus ac velit fermentum, convallis augue non, tempus magna.</p>
+
+          <p>In vel velit metus. Vestibulum non nisi lacinia, ullamcorper justo rutrum, luctus erat. Curabitur pellentesque bibendum pulvinar. Duis porttitor bibendum hendrerit. Praesent commodo ex sit amet tortor placerat imperdiet. Pellentesque in volutpat risus. Nam vitae gravida urna. Aenean eu nisi ut velit pharetra efficitur.</p>
+
+          <!-- Social and Contact Links -->
+          <a href="https://www.linkedin.com/in/ryankopinsky/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/ryankopinsky" target="_blank">GitHub</a>
+          <a href="mailto:ryan@ioavenue.com">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- At the end of all your content, add Bootstrap JS here -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+```
+
+![added_container_div](./images/added_container_div.png)
+
+Notice how our content is now centered with equal whitespace on the left and right of the page. 
