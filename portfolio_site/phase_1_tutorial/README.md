@@ -297,8 +297,8 @@ In this part of the tutorial, we will use CSS to improve the appearance and layo
 
 We will style our website as follows:
 1. Margins: add margins to the body so it's not so close to the edge.
-1. Size: refactor your headshot such that its size is determined by CSS as opposed to an HTML attribute.
-1. Layout: position bio next to the headshot.
+1. Sizing: refactor your headshot such that its size is determined by CSS as opposed to an HTML attribute.
+1. Layout: position bio and social links next to the headshot.
 1. Fonts: give your name a color and increase the font size of the bio text.
 
 #### Setting Up CSS Stylesheet
@@ -363,3 +363,46 @@ h1 {
 ```
 
 ![linked_css](./images/linked_css.png)
+
+Now that we've confirmed that our CSS stylesheet is working, you can delete the test CSS that turned all `h1` elements red.
+
+#### Margins
+
+Our HTML content is too close to the edges of our page. Let's add margins to give it better spacing.
+
+Your `custom.css` should look like:
+
+```CSS
+body {
+  margin-top: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 40px;
+}
+```
+
+![added_margins](./images/added_margins.png)
+
+Our website looks much better already! Let's continue making improvements.
+
+#### Sizing
+
+Initially, we constrained the size of our headshot using an HTML attribute. However, the sizing of elements should really be done by applying a CSS style. Let's refactor our HTML. Update your headshot `img` tag as follows: `<img id="headshot" src="images/professional_headshot.jpg" alt="Headshot for Ryan Kopinsky">`. We gave our `img` tag an `id` attribute so we can reference it in our CSS. We also removed the `width` attribute.
+
+Update your `custom.css` as follows:
+
+```CSS
+body {
+  margin-top: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 40px;
+}
+
+#headshot {
+  width: 300px; /* constrain the width */
+  height: auto; /* height automatically calculated to maintain aspect ratio */
+}
+```
+
+When refreshing your page, it will look like nothing changed. However, under the hood, we improved our code by using a CSS style to set the size of our headshot.
