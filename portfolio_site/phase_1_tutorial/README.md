@@ -299,7 +299,7 @@ We will style our website as follows:
 1. Margins: add margins to the body so it's not so close to the edge.
 1. Sizing: refactor your headshot such that its size is determined by CSS as opposed to an HTML attribute.
 1. Layout: position bio and social links next to the headshot.
-1. Fonts: give your name a color and increase the font size of the bio text.
+1. Fonts: increase the font size of the bio text.
 
 #### Setting Up CSS Stylesheet
 
@@ -571,3 +571,90 @@ body {
 ![inline_block_width_adjusted_margin_fix_top](./images/inline_block_width_adjusted_margin_fix_top.png)
 
 There we go! We are now done with adjusting the layout of our website.
+
+#### Fonts
+
+Let's increase the font size of our bio:
+
+```CSS
+body {
+  margin-top: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 40px;
+}
+
+p {
+  font-size: 18px;
+}
+
+#headshot {
+  width: 300px; /* constrain the width */
+  height: auto; /* height automatically calculated to maintain aspect ratio */
+}
+
+#headshotContainer {
+  display: inline-block;
+  width: 30%;
+  margin: -4px;
+}
+
+#aboutContainer {
+  display: inline-block;
+  width: 70%;
+  margin: -4px;
+  vertical-align: top;
+}
+```
+
+![font_size](./images/font_size.png)
+
+Update your HTML to add an `h2` subheading for your bio and social links content:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- responsive viewport meta tag -->
+
+    <!-- Update your website title -->
+    <title>Ryan Kopinsky</title>
+
+    <!-- Link Bootstrap CSS here -->
+
+    <!-- Link custom CSS here -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+  </head>
+  <body>
+    <!-- Add your content here -->
+    <h1>Ryan Kopinsky</h1>
+
+    <!-- Headshot -->
+    <div id="headshotContainer">
+      <img id="headshot" src="images/professional_headshot.jpg" alt="Headshot for Ryan Kopinsky">
+    </div>
+
+    <!-- About -->
+    <div id="aboutContainer">
+      <h2>About Me</h2>
+
+      <!-- Short Bio -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin gravida tellus, in mattis magna. Donec non leo quis tellus tempus consectetur. Quisque ultricies lectus varius velit ultricies facilisis ut placerat nulla. In est nibh, malesuada a varius non, suscipit sed leo. Sed commodo laoreet commodo. Phasellus ac velit fermentum, convallis augue non, tempus magna.</p>
+
+      <p>In vel velit metus. Vestibulum non nisi lacinia, ullamcorper justo rutrum, luctus erat. Curabitur pellentesque bibendum pulvinar. Duis porttitor bibendum hendrerit. Praesent commodo ex sit amet tortor placerat imperdiet. Pellentesque in volutpat risus. Nam vitae gravida urna. Aenean eu nisi ut velit pharetra efficitur.</p>
+
+      <!-- Social and Contact Links -->
+      <a href="https://www.linkedin.com/in/ryankopinsky/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/ryankopinsky" target="_blank">GitHub</a>
+      <a href="mailto:ryan@ioavenue.com">Email</a>
+    </div>
+
+    <!-- At the end of all your content, add Bootstrap JS here -->
+  </body>
+</html>
+```
+
+![added_about_me_subheading](./images/added_about_me_subheading.png)
+
+We are now done with **Part 2 - CSS**.
