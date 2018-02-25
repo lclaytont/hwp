@@ -874,4 +874,100 @@ Your `index.html` should look like:
 
 ![added_container_div](./images/added_container_div.png)
 
-Notice how our content is now centered with equal whitespace on the left and right of the page. 
+Notice how our content is now centered with equal whitespace on the left and right of the page.
+
+#### Responsive Breakpoints
+
+In the CSS part of our tutorial, we used `inline-block` `div`s to arrange our content side-by-side. Unfortunately, this method doesn't work well on various screen sizes, especially on mobile devices.
+We will utilize Bootstrap's responsive breakpoints to arrange content on various screen sizes. You can learn more about responsive breakpoints here: http://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints. It is strongly encouraged to learn more about responsive breakpoints on your own time. This YouTube video provides a good overview: https://www.youtube.com/watch?v=T425XV5ueIc.
+
+Your `index.html` should look like:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- responsive viewport meta tag -->
+
+    <!-- Update your website title -->
+    <title>Ryan Kopinsky</title>
+
+    <!-- Link Bootstrap CSS here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Link custom CSS here -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+  </head>
+  <body>
+    <!-- Add your content here -->
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">Ryan Kopinsky</a>
+    </nav>
+
+    <div class="container" id="page-content">
+      <!-- Content here -->
+      <div class="row">
+        <!-- Headshot -->
+        <div class="col-sm-4">
+          <img id="headshot" src="images/professional_headshot.jpg" alt="Headshot for Ryan Kopinsky">
+        </div>
+
+        <!-- About -->
+        <div class="col-sm-8">
+          <h2>About Me</h2>
+
+          <!-- Short Bio -->
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin gravida tellus, in mattis magna. Donec non leo quis tellus tempus consectetur. Quisque ultricies lectus varius velit ultricies facilisis ut placerat nulla. In est nibh, malesuada a varius non, suscipit sed leo. Sed commodo laoreet commodo. Phasellus ac velit fermentum, convallis augue non, tempus magna.</p>
+
+          <p>In vel velit metus. Vestibulum non nisi lacinia, ullamcorper justo rutrum, luctus erat. Curabitur pellentesque bibendum pulvinar. Duis porttitor bibendum hendrerit. Praesent commodo ex sit amet tortor placerat imperdiet. Pellentesque in volutpat risus. Nam vitae gravida urna. Aenean eu nisi ut velit pharetra efficitur.</p>
+
+          <!-- Social and Contact Links -->
+          <a href="https://www.linkedin.com/in/ryankopinsky/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/ryankopinsky" target="_blank">GitHub</a>
+          <a href="mailto:ryan@ioavenue.com">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- At the end of all your content, add Bootstrap JS here -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+```
+
+![added_columns](./images/added_columns.png)
+
+Notice that we added a `class` attribute to our `div` tags, for example `class="col-sm-4"`. Although, we gave 4 columns to our headshot and 8 columns to our "About Me" content, the headshot bleeds into the other columns. We need to use custom CSS to constrain its size
+
+Your `custom.css` should look like:
+
+```CSS
+#headshot {
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px; /* Whitespace needed for mobile */
+}
+```
+
+![added_columns_image_size](./images/added_columns_image_size.png)
+
+Definitely looks better! However, we do need to add some whitespace between our `navbar` and content.
+
+Your `custom.css` should look like:
+
+```CSS
+#page-content {
+  margin: 40px;
+}
+
+#headshot {
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px; /* Whitespace needed for mobile */
+}
+```
+
+![navbar_spacing](./images/navbar_spacing.png)
