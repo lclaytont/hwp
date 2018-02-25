@@ -971,3 +971,72 @@ Your `custom.css` should look like:
 ```
 
 ![navbar_spacing](./images/navbar_spacing.png)
+
+#### Bootstrap Buttons
+
+For the final section in this tutorial, we will update the social and contact links to be displayed as Bootstrap buttons. There are many ways to create a button in Bootstrap. One way is to use an `a` tag, for example:
+
+```html
+<a class="btn btn-outline-dark" href="https://github.com/ryankopinsky" role="button" target="_blank">GitHub</a>
+```
+
+After updating all three links, your `index.html` should look like:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- responsive viewport meta tag -->
+
+    <!-- Update your website title -->
+    <title>Ryan Kopinsky</title>
+
+    <!-- Link Bootstrap CSS here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Link custom CSS here -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+  </head>
+  <body>
+    <!-- Add your content here -->
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">Ryan Kopinsky</a>
+    </nav>
+
+    <div class="container" id="page-content">
+      <!-- Content here -->
+      <div class="row">
+        <!-- Headshot -->
+        <div class="col-sm-4">
+          <img id="headshot" src="images/professional_headshot.jpg" alt="Headshot for Ryan Kopinsky">
+        </div>
+
+        <!-- About -->
+        <div class="col-sm-8">
+          <h2>About Me</h2>
+
+          <!-- Short Bio -->
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin gravida tellus, in mattis magna. Donec non leo quis tellus tempus consectetur. Quisque ultricies lectus varius velit ultricies facilisis ut placerat nulla. In est nibh, malesuada a varius non, suscipit sed leo. Sed commodo laoreet commodo. Phasellus ac velit fermentum, convallis augue non, tempus magna.</p>
+
+          <p>In vel velit metus. Vestibulum non nisi lacinia, ullamcorper justo rutrum, luctus erat. Curabitur pellentesque bibendum pulvinar. Duis porttitor bibendum hendrerit. Praesent commodo ex sit amet tortor placerat imperdiet. Pellentesque in volutpat risus. Nam vitae gravida urna. Aenean eu nisi ut velit pharetra efficitur.</p>
+
+          <!-- Social and Contact Links -->
+          <a class="btn btn-outline-dark" href="https://www.linkedin.com/in/ryankopinsky/" role="button" target="_blank">LinkedIn</a>
+          <a class="btn btn-outline-dark" href="https://github.com/ryankopinsky" role="button" target="_blank">GitHub</a>
+          <a class="btn btn-outline-dark" href="mailto:ryan@ioavenue.com" role="button">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- At the end of all your content, add Bootstrap JS here -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+```
+
+![added_bootstrap_buttons](./images/added_bootstrap_buttons.png)
+
+If you've reached this far, congratulations! You are done with this tutorial. However, in order to really master frontend development, you are encouraged to experiment and learn more on your own.
