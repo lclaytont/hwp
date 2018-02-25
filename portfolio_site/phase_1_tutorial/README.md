@@ -658,3 +658,74 @@ Update your HTML to add an `h2` subheading for your bio and social links content
 ![added_about_me_subheading](./images/added_about_me_subheading.png)
 
 We are now done with **Part 2 - CSS**.
+
+---
+
+### Part 3 - Bootstrap
+
+In the third and final part of this tutorial, we will demonstrate how the Bootstrap framework allows us to quickly build an awesome responsive site. We will update our website as follows:
+1. Add Bootstrap dependencies (i.e. CSS and JS) in our HTML file.
+1. Add a `navbar` with our name as the brand.
+1. Utilize a `container` to setup a mobile-responsive layout.
+1. Utilize responsive breakpoints to arrange content on various screen sizes.
+1. Update the social and contact links to be displayed as buttons.
+
+#### Bootstrap Dependencies
+In order to use Bootstrap, we need to "import" Bootstrap CSS and JS files. There are a few ways to do this:
+1. We can download the CSS and JS files and add it to our project directory. In our HTML, we can then link to these local files.
+1. We can link to CDN-hosted Bootstrap CSS and JS files. **We recommend using this method.**
+1. We can compile Bootstrap with our own asset pipeline by downloading the source Sass, JavaScript, and documentation files.
+
+Let's link to the CDN-hosted Bootstrap CSS and JS files:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- responsive viewport meta tag -->
+
+    <!-- Update your website title -->
+    <title>Ryan Kopinsky</title>
+
+    <!-- Link Bootstrap CSS here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Link custom CSS here -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+  </head>
+  <body>
+    <!-- Add your content here -->
+    <h1>Ryan Kopinsky</h1>
+
+    <!-- Headshot -->
+    <div id="headshotContainer">
+      <img id="headshot" src="images/professional_headshot.jpg" alt="Headshot for Ryan Kopinsky">
+    </div>
+
+    <!-- About -->
+    <div id="aboutContainer">
+      <h2>About Me</h2>
+
+      <!-- Short Bio -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin gravida tellus, in mattis magna. Donec non leo quis tellus tempus consectetur. Quisque ultricies lectus varius velit ultricies facilisis ut placerat nulla. In est nibh, malesuada a varius non, suscipit sed leo. Sed commodo laoreet commodo. Phasellus ac velit fermentum, convallis augue non, tempus magna.</p>
+
+      <p>In vel velit metus. Vestibulum non nisi lacinia, ullamcorper justo rutrum, luctus erat. Curabitur pellentesque bibendum pulvinar. Duis porttitor bibendum hendrerit. Praesent commodo ex sit amet tortor placerat imperdiet. Pellentesque in volutpat risus. Nam vitae gravida urna. Aenean eu nisi ut velit pharetra efficitur.</p>
+
+      <!-- Social and Contact Links -->
+      <a href="https://www.linkedin.com/in/ryankopinsky/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/ryankopinsky" target="_blank">GitHub</a>
+      <a href="mailto:ryan@ioavenue.com">Email</a>
+    </div>
+
+    <!-- At the end of all your content, add Bootstrap JS here -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+```
+
+We added a `link` tag in our `head` to import Bootstrap CSS. Right before the closing `</body>` tag, we added 3 `script` tags to import Bootstrap JS. When we refresh our webpage, we notice a few changes:
+
+![added_bootstrap](./images/added_bootstrap.png)
