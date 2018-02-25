@@ -290,3 +290,76 @@ For documentation purposes, we added 3 comments:
 We are now done with **Part 1 - HTML**.
 
 ---
+
+### Part 2 - CSS
+
+In this part of the tutorial, we will use CSS to improve the appearance and layout of our website. Obviously, there is no set way to style your website. However, for this tutorial we will give it some basic styling. You are free to enhance it as you see fit.
+
+We will style our website as follows:
+1. Margins: add margins to the body so it's not so close to the edge.
+1. Size: refactor your headshot such that its size is determined by CSS as opposed to an HTML attribute.
+1. Layout: position bio next to the headshot.
+1. Fonts: give your name a color and increase the font size of the bio text.
+
+#### Setting Up CSS Stylesheet
+
+Before we can apply styles to our HTML elements, we need to create a CSS file and link to it in our HTML file:
+1. In `portfolio_site`, create a new folder: `$ mkdir css`
+1. Create your CSS file: `$ touch css/custom.css`
+1. To make sure we have done everything correctly, let's write some test CSS in our `custom.css` file:
+```CSS
+h1 {
+    color: red;
+}
+```
+1. Refresh your webpage to see if all our `h1` headers are now red (in this case our name). It seems like nothing happened. We created our CSS file and added a style; however, **we did not link to our CSS in our HTML file**. It doesn't matter how experienced you are as a web developer, you will likely make this mistake at least once. So let's fix it.
+1. Add a link to our CSS stylesheet: `<link rel="stylesheet" type="text/css" href="css/custom.css">`. Refresh your webpage and you should now see your name in red.
+
+Your `index.html` should look like:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- responsive viewport meta tag -->
+
+    <!-- Update your website title -->
+    <title>Ryan Kopinsky</title>
+
+    <!-- Link Bootstrap CSS here -->
+
+    <!-- Link custom CSS here -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+  </head>
+  <body>
+    <!-- Add your content here -->
+    <h1>Ryan Kopinsky</h1>
+
+    <!-- Headshot -->
+    <img src="images/professional_headshot.jpg" alt="Headshot for Ryan Kopinsky" width="300px">
+
+    <!-- Short Bio -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin gravida tellus, in mattis magna. Donec non leo quis tellus tempus consectetur. Quisque ultricies lectus varius velit ultricies facilisis ut placerat nulla. In est nibh, malesuada a varius non, suscipit sed leo. Sed commodo laoreet commodo. Phasellus ac velit fermentum, convallis augue non, tempus magna.</p>
+
+    <p>In vel velit metus. Vestibulum non nisi lacinia, ullamcorper justo rutrum, luctus erat. Curabitur pellentesque bibendum pulvinar. Duis porttitor bibendum hendrerit. Praesent commodo ex sit amet tortor placerat imperdiet. Pellentesque in volutpat risus. Nam vitae gravida urna. Aenean eu nisi ut velit pharetra efficitur.</p>
+
+    <!-- Social and Contact Links -->
+    <a href="https://www.linkedin.com/in/ryankopinsky/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/ryankopinsky" target="_blank">GitHub</a>
+    <a href="mailto:ryan@ioavenue.com">Email</a>
+
+    <!-- At the end of all your content, add Bootstrap JS here -->
+  </body>
+</html>
+```
+
+Your `custom.css` should look like:
+
+```CSS
+h1 {
+  color: red;
+}
+```
+
+![linked_css](./images/linked_css.png)
