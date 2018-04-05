@@ -13,15 +13,12 @@ For your final project, you are expected to work in teams of two. Below are the 
 
 ---
 
-### Deliverables
-- 11/19/2017 11:59PM: Idea and assignment of tasks for each teammate.
-- 11/21/2017 11:59PM: Wireframes for your views. ERDs for your models.
-- 11/25/2017 11:59PM: Final Resume Due
-- 11/27/2017 5PM: Code Review 1
-- 11/29/2017 5PM: Code Review 2
-- 11/30/2017 11:59PM: Slides for Pitch (Draft)
-- 12/01/2017 5PM: Practice Pitch
-- 12/04/2017 5PM: Final Code Review - Code Freeze
-- 12/05/2017 11:59PM: Completed Slides for Pitch
-- 12/06/2017 5PM: Final Practice Pitch
-- 12/08/2017 6PM: Present your completed project at the I/O Avenue Pitch Night.
+### Deadlines
+- April 9: Form a Team
+- April 10: Final App Idea
+- April 11: Plan for Implementation (e.g. app architecture, ERDs, wireframes etc)
+- April 12: Coding Begins
+- April 23: Slides for Pitch
+- April 24: Pitch Practice 1
+- April 25: Pitch Practice 2
+- April 27 6-9PM: Pitch Night
